@@ -42,12 +42,14 @@ begin
 	default clock is rising_edge(clk_in);
 
 	stability_1: assert 
-		{(dut1_a1_in = dut2_a1_in and dut1_a2_in = dut2_a2_in)[*1 to inf];
+		{(dut1_a1_in = dut2_a1_in and dut1_a2_in = dut2_a2_in)[+];
+		-- {(dut1_a1_in = dut2_a1_in and dut1_a2_in = dut2_a2_in)[*1 to inf];
 			dut1_a1_in /= dut2_a1_in and dut1_a2_in = dut2_a2_in} |->
 		{dut1_b1_out = dut2_b1_out}!;
 
 	stability_2: assert 
-		{(dut1_a1_in = dut2_a1_in and dut1_a2_in = dut2_a2_in)[*1 to inf];
+		{(dut1_a1_in = dut2_a1_in and dut1_a2_in = dut2_a2_in)[+];
+		-- {(dut1_a1_in = dut2_a1_in and dut1_a2_in = dut2_a2_in)[*1 to inf];
 			dut1_a1_in = dut2_a1_in and dut1_a2_in /= dut2_a2_in} |->
 		{dut1_b2_out = dut2_b2_out}!;
 
