@@ -45,7 +45,7 @@ begin
 		if cnt = 20 then
 			b2_out <= not a2_in;
 		end if;
-		b2_out <= not a2_in;
+		-- b2_out <= not a2_in;
 	end process;
 end;
 
