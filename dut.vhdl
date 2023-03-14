@@ -6,10 +6,10 @@ entity dut is
 		clk_in: in std_logic;
 
 		a1_in: in std_logic;
-		b1_out: out std_logic;
+		b1_out: out std_logic := '0';
 
 		a2_in: in std_logic;
-		b2_out: out std_logic
+		b2_out: out std_logic := '0'
 	);
 end;
 

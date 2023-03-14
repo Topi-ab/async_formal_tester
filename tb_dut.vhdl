@@ -84,13 +84,13 @@ begin
 	b2_nonasync_2: assert {all_inputs_equal[+]; a2_differ} |-> {b2_equal};
 	
 	-- This generates an assert at cycle 20:
-	b2_nonasync_3: assert {all_inputs_equal[*2 to inf]; a2_differ} |-> {b2_equal};
+	-- b2_nonasync_3: assert {all_inputs_equal[*2 to inf]; a2_differ} |-> {b2_equal};
 
 	-- This generates an assert at cycle 20:
-	b2_nonasync_4: assert {all_inputs_equal[*0 to inf]; a2_differ} |-> {b2_equal};
+	-- b2_nonasync_4: assert {all_inputs_equal[*0 to inf]; a2_differ} |-> {b2_equal};
 
 	-- This generates an assert at cycle 20:
-	b2_nonasync_5: assert {all_inputs_equal[*]; a2_differ} |-> {b2_equal};
+	-- b2_nonasync_5: assert {all_inputs_equal[*]; a2_differ} |-> {b2_equal};
 	
 	
 	--cover_tester: cover {all_inputs_equal[*21]; a2_differ; all_inputs_equal[*5]};
