@@ -40,22 +40,17 @@ begin
 		wait;
 	end process;
 
-	dut_1: entity work.dut
+	dut: entity work.tb_dut
 		port map(
 			clk_in => clk,
-			a1_in => dut1_a1,
-			b1_out => dut1_b1,
-			a2_in => dut1_a2,
-			b2_out => dut1_b2
-		);
-
-	dut_2: entity work.dut
-		port map(
-			clk_in => clk,
-			a1_in => dut2_a1,
-			b1_out => dut2_b1,
-			a2_in => dut2_a2,
-			b2_out => dut2_b2
+			dut1_a1_in => dut1_a1,
+			dut1_b1_out => dut1_b1,
+			dut1_a2_in => dut1_a2,
+			dut1_b2_out => dut1_b2,
+			dut2_a1_in => dut2_a1,
+			dut2_b1_out => dut2_b1,
+			dut2_a2_in => dut2_a2,
+			dut2_b2_out => dut2_b2
 		);
 end;
 
