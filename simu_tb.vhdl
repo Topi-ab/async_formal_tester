@@ -19,10 +19,10 @@ architecture rtl of simu_tb is
 begin
 	clk_pr: process
 	begin
-		clk <= '0';
-		wait for 50 ns;
 		clk <= '1';
-		wait for 50 ns;
+		wait for 5 ns;
+		clk <= '0';
+		wait for 5 ns;
 	end process;
 
 	dut1_a1 <= '0';
@@ -30,12 +30,12 @@ begin
 
 	tb_pr: process
 	begin
-		dut1_a2 <= '0';
-		dut2_a2 <= '0';
+		dut1_a2 <= '1';
+		dut2_a2 <= '1';
 		for i in 1 to 20 loop
 			wait until rising_edge(clk);
 		end loop;
-		dut1_a2 <= '1';
+		dut2_a2 <= '0';
 
 		wait;
 	end process;
